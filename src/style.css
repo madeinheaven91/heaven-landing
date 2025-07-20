@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+:root {
+  --fg: #f4f7be;
+  --fg-dark: #b5b789;
+  --bg-lighter: #3282b8;
+  --bg-light: #0f4c75;
+  --bg: #1e000e;
+}
+
+@layer base {
+  body {
+    @apply text-2xl overflow-x-hidden relative;
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--bg);
+    color: var(--fg-dark);
+    padding-block: 2rem;
+    padding-inline: 6rem;
+  }
+
+  strong {
+    color: var(--fg);
+    font-style: bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr {
+    color: var(--fg);
+  }
+
+  hr {
+    margin-block: 1em;
+  }
+
+  li::before {
+    content: "⯁";
+    padding-inline: 0.5em;
+  }
+
+  p {
+    @apply mb-5;
+  }
+
+  h1 {
+    @apply text-6xl;
+  }
+
+  h2 {
+    @apply text-5xl my-10;
+  }
+
+  h3 {
+    @apply text-4xl my-5;
+  }
+  h4 {
+    @apply text-3xl my-5;
+  }
+
+  a {
+    @apply underline;
+  }
+  a:hover {
+    color: var(--fg);
+  }
+}

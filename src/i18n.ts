@@ -1,0 +1,64 @@
+import { createI18n } from "vue-i18n";
+
+const i18n = createI18n({
+    legacy: false,
+    locale: 'ru',
+    fallbackLocale: 'en',
+    messages: {
+        en: {
+            about: "I am a backend developer specializing in Go and Rust.",
+            ul: "My other endeavours:",
+            li1: "industrial confusion and inconvenience engineering",
+            li2: "introducing alchemic formulas to software",
+            li3: "AGILE memeing practices",
+            projects: "My projects",
+            repo: "View repo",
+            masterbeat: "A TUI metronome built with Go.",
+            jazzcoding: "My blog page. Built with Rust (Actix, Diesel) and Vue3. Uses PostgreSQL.",
+            "black-turtle": "Telegram bot for viewing schedule in my college. Built with Go. Uses PostgreSQL and Redis.",
+            contacts: "You can find me here",
+            telegram: "Telegram",
+            "telegram-desc": "I spend more time there than I'd like to admit",
+            github: "Github",
+            "github-desc": "Game changing projects here",
+            email: "Email",
+            "email-desc": "I am open to talk business",
+            misc: "Check out my other stuff",
+            channel: "My telegram channel",
+            "channel-desc": "Memes and stuff (warning: russian language)",
+            blog: "My blog",
+            "blog-desc": "Long reads (warning: russian language)",
+            library: "My library",
+            "library-desc": "Books that I've read. Also contains cheat sheets and sheet music",
+        },
+        ru: {
+            about: "Я бекэнд разработчик, специализирующийся на Go и Rust.",
+            ul: "Другие мои увлечения:",
+            li1: "производственный хаос и инженерия неудобств",
+            li2: "внедрение алхимических формул в код",
+            li3: "практики мемов по AGILE",
+            projects: "Мои проекты",
+            repo: "Репозиторий",
+            masterbeat: "Метроном в терминале на Go.",
+            jazzcoding: "Мой блог. Сделан на Rust (Actix, Diesel) и Vue3. Используется PostgreSQL.",
+            "black-turtle": "Телеграм бот для просмотра расписания в моем колледже. Сделан на Go. Используется PostgreSQL и Redis.",
+            contacts: "Я доступен здесь",
+            telegram: "Telegram",
+            "telegram-desc": "Я провожу в нем больше времени, чем стоило бы",
+            github: "Github",
+            "github-desc": "Проекты, перевернувшие индустрию",
+            email: "Email",
+            "email-desc": "Я открыт для деловых предложений",
+            misc: "Зацени еще штуки",
+            channel: "Телеграм канал",
+            "channel-desc": "Приколы о программировании и не только",
+            blog: "Блог",
+            "blog-desc": "Для более длинных постов",
+            library: "Библиотека",
+            "library-desc": "Книжки, которые я прочел. Также есть шпаргалки и музыкальные транскрипции",
+        }
+    }
+
+})
+
+export default i18n;
