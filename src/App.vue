@@ -12,17 +12,12 @@ const { t } = useI18n();
 </script>
 
 <template>
-  <img
-    v-if="isDesktop"
-    src="/images/sun.png"
-    class="absolute filter -z-10 right-[0%] top-[0%]"
-  />
-
-  <img
-    v-else
-    src="/images/sun.png"
-    class="absolute filter -z-10 left-[50%] top-[10%]"
-  />
+  <div
+    class="absolute -z-10"
+    :class="isDesktop ? 'right-[0%] top-[0%]' : 'left-[50%] top-[10%]'"
+  >
+    <img src="/images/sun.png" class="filter w-auto h-auto max-w-screen" />
+  </div>
 
   <div class="flex justify-between items-center">
     <h1>Made in heaven</h1>
@@ -55,8 +50,7 @@ const { t } = useI18n();
   <h2>{{ t("contacts") }}</h2>
   <hr />
   <section>
-    <div class="grid gap-5"
-        :class="isDesktop ? 'grid-cols-3' : 'grid-rows-3'">
+    <div class="grid gap-5" :class="isDesktop ? 'grid-cols-3' : 'grid-rows-3'">
       <ContactCard
         icon="pi-telegram"
         :name="t('telegram')"
@@ -81,8 +75,7 @@ const { t } = useI18n();
   <h2>{{ t("misc") }}</h2>
   <hr />
   <section>
-    <div class="grid gap-5"
-        :class="isDesktop ? 'grid-cols-3' : 'grid-rows-3'">
+    <div class="grid gap-5" :class="isDesktop ? 'grid-cols-3' : 'grid-rows-3'">
       <ContactCard
         icon="pi-telegram"
         :name="t('channel')"
