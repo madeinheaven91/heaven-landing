@@ -4,8 +4,6 @@
 :root {
   --fg: #f4f7be;
   --fg-dark: #b5b789;
-  --bg-lighter: #3282b8;
-  --bg-light: #0f4c75;
   --bg: #1e000e;
 }
 
@@ -40,7 +38,8 @@
   }
 
   li::before {
-    content: "⯁";
+    font-family: 'primeicons';
+    content: "\e932";
     padding-inline: 0.5em;
   }
 
