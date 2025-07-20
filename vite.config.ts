@@ -12,4 +12,13 @@ export default defineConfig({
     },
   },
   plugins: [vue(), tailwindcss()],
+  build: {
+    assetsDir: 'assets/landing',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/landing/[name]-[hash][extname]',
+        chunkFileNames: 'assets/landing/[name]-[hash].js'
+      }
+    }
+  }
 })
