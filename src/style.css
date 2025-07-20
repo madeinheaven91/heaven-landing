@@ -11,16 +11,13 @@
 
 @layer base {
   body {
-    @apply text-2xl overflow-x-hidden relative;
+    @apply overflow-x-hidden relative;
     font-family: "Yeseva One", serif;
     font-weight: 400;
     font-style: normal;
     background-color: var(--bg);
     color: var(--fg-dark);
-    padding-block: 2rem;
-    padding-inline: 6rem;
   }
-
   strong {
     color: var(--fg);
     font-style: bold;
@@ -45,29 +42,91 @@
     padding-inline: 0.5em;
   }
 
-  p {
-    @apply mb-5;
-  }
-
-  h1 {
-    @apply text-6xl;
-  }
-
-  h2 {
-    @apply text-5xl my-10;
-  }
-
-  h3 {
-    @apply text-4xl my-5;
-  }
-  h4 {
-    @apply text-3xl my-5;
-  }
-
   a {
     @apply underline;
   }
   a:hover {
     color: var(--fg);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    body {
+      @apply text-2xl;
+      padding-block: 2rem;
+      padding-inline: 6rem;
+    }
+
+    p {
+      @apply mb-5;
+    }
+
+    h1 {
+      @apply text-6xl;
+    }
+
+    h2 {
+      @apply text-5xl my-10;
+    }
+
+    h3 {
+      @apply text-4xl my-5;
+    }
+    h4 {
+      @apply text-3xl my-5;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) and (min-width: 640px) {
+    body {
+      @apply text-2xl;
+      padding-block: 2rem;
+      padding-inline: 6rem;
+    }
+
+    p {
+      @apply mb-5;
+    }
+
+    h1 {
+      @apply text-6xl;
+    }
+
+    h2 {
+      @apply text-5xl my-10;
+    }
+
+    h3 {
+      @apply text-4xl my-5;
+    }
+    h4 {
+      @apply text-3xl my-5;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    body {
+      @apply text-xl;
+      padding-block: 2rem;
+      padding-inline: 2rem;
+    }
+
+    p {
+      @apply mb-2;
+    }
+
+    h1 {
+      @apply text-4xl;
+    }
+
+    h2 {
+      @apply text-3xl my-5;
+    }
+
+    h3 {
+      @apply text-2xl my-2;
+    }
+    h4 {
+      @apply text-xl my-2;
+    }
   }
 }
