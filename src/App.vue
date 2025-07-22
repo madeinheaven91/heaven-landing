@@ -7,6 +7,7 @@ import { useWindowSize } from "@vueuse/core";
 
 const { width } = useWindowSize();
 const isDesktop = computed(() => width.value >= 1024);
+const isMobile = computed(() => width.value <= 640);
 
 const { t } = useI18n();
 </script>
@@ -83,29 +84,64 @@ const { t } = useI18n();
   <footer>
     <h2 class="text-center">{{ t("contacts") }}</h2>
     <section>
-      <div
-        class="grid gap-5 mx-auto"
-        :class="isDesktop ? 'grid-cols-3 w-[50%]' : 'grid-rows-3'"
-      >
-        <Card
-          icon="pi-telegram"
-          :name="t('telegram')"
-          :description="t('telegram-desc')"
-          href="https://t.me/madeinheaven91"
-        />
-        <Card
-          icon="pi-github"
-          :name="t('github')"
-          :description="t('github-desc')"
-          href="https://github.com/madeinheaven91"
-        />
-        <Card
-          icon="pi-at"
-          :name="t('email')"
-          :description="t('email-desc')"
-          href="mailto:biznizjunk@gmail.com"
-        />
-      </div>
+      <template v-if="!isMobile">
+        <div
+          class="grid gap-5"
+          :class="isDesktop ? 'grid-cols-3 w-[50%] mx-auto' : 'grid-rows-3'"
+        >
+          <Card
+            icon="pi-telegram"
+            :name="t('telegram')"
+            :description="t('telegram-desc')"
+            href="https://t.me/madeinheaven91"
+          />
+          <Card
+            icon="pi-github"
+            :name="t('github')"
+            :description="t('github-desc')"
+            href="https://github.com/madeinheaven91"
+          />
+          <Card
+            icon="pi-at"
+            :name="t('email')"
+            :description="t('email-desc')"
+            href="mailto:biznizjunk@gmail.com"
+          />
+        </div>
+      </template>
+
+      <template v-else>
+        <div class="mt-3 flex flex-col gap-2">
+          <div class="flex justify-center gap-3 items-center">
+            <i class="pi pi-telegram"></i>
+            <a
+              href="https://t.me/madeinheaven91"
+              class="no-underline text-[var(--fg)]"
+            >
+              Telegram</a
+            >
+          </div>
+          <div class="flex justify-center gap-3 items-center">
+            <i class="pi pi-github"></i>
+            <a
+              href="https://github.com/madeinheaven91"
+              class="no-underline text-[var(--fg)]"
+            >
+              Github</a
+            >
+          </div>
+
+          <div class="flex justify-center gap-3 items-center">
+            <i class="pi pi-at"></i>
+            <a
+              href="mailto:biznizjunk@gmail.com"
+              class="no-underline text-[var(--fg)]"
+            >
+              Email</a
+            >
+          </div>
+        </div>
+      </template>
     </section>
   </footer>
 </template>
@@ -123,5 +159,9 @@ section {
 
 footer {
   background-color: #030303;
+}
+
+footer section {
+  padding-inline: 0;
 }
 </style>

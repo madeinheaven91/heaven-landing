@@ -16,7 +16,7 @@ const i18n = createI18n({
             masterbeat: "A TUI metronome built with Go.",
             jazzcoding: "My blog page. Built with Rust (Actix, Diesel) and Vue3. Uses PostgreSQL.",
             "black-turtle": "Telegram bot for viewing schedule in my college. Built with Go. Uses PostgreSQL and Redis.",
-            contacts: "You can find me here",
+            contacts: "Find me here",
             telegram: "Telegram",
             "telegram-desc": "I spend more time there than I'd like to admit",
             github: "Github",
