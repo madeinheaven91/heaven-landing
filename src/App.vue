@@ -12,90 +12,102 @@ const { t } = useI18n();
 </script>
 
 <template>
-  <div
-    class="absolute -z-10"
-    :class="isDesktop ? 'right-[0%] top-[0%]' : 'left-[50%] top-[10%]'"
-  >
-    <img src="/images/sun.png" class="filter w-auto h-auto max-w-screen" />
-  </div>
-
-  <div class="flex justify-between items-center">
-    <h1>Made in heaven</h1>
-    <LanguageSwitch v-if="isDesktop" />
-    <LanguageSwitchMobile v-else />
-  </div>
-  <hr />
-  <section>
-    <p>{{ t("about") }}</p>
-    <p>{{ t("ul") }}</p>
-    <ul>
-      <li>{{ t("li1") }}</li>
-      <li>{{ t("li2") }}</li>
-      <li>{{ t("li3") }}</li>
-    </ul>
-  </section>
-
-  <h2>{{ t("projects") }}</h2>
-  <hr />
-  <section>
-    <Project
-      name="Black Turtle"
-      :desc="t('black-turtle')"
-      repo="black-turtle-go"
-    />
-    <Project name="Masterbeat" :desc="t('masterbeat')" repo="masterbeat" />
-    <Project name="JazzCoding" :desc="t('jazzcoding')" repo="heaven-web" />
-  </section>
-
-  <h2>{{ t("contacts") }}</h2>
-  <hr />
-  <section>
-    <div class="grid gap-5" :class="isDesktop ? 'grid-cols-3' : 'grid-rows-3'">
-      <ContactCard
-        icon="pi-telegram"
-        :name="t('telegram')"
-        :description="t('telegram-desc')"
-        href="https://t.me/madeinheaven91"
-      />
-      <ContactCard
-        icon="pi-github"
-        :name="t('github')"
-        :description="t('github-desc')"
-        href="https://github.com/madeinheaven91"
-      />
-      <ContactCard
-        icon="pi-at"
-        :name="t('email')"
-        :description="t('email-desc')"
-        href="mailto:biznizjunk@gmail.com"
-      />
+  <main>
+    <div
+      class="absolute -z-10"
+      :class="isDesktop ? 'right-[0%] top-[0%]' : 'left-[50%] top-[10%]'"
+    >
+      <img src="/images/sun.png" class="filter w-auto h-auto max-w-screen" />
     </div>
-  </section>
 
-  <h2>{{ t("misc") }}</h2>
-  <hr />
-  <section>
-    <div class="grid gap-5" :class="isDesktop ? 'grid-cols-3' : 'grid-rows-3'">
-      <ContactCard
-        icon="pi-telegram"
-        :name="t('channel')"
-        :description="t('channel-desc')"
-        href="https://t.me/jazz_coding"
-      />
-      <ContactCard
-        icon="pi-pen-to-square"
-        :name="t('blog')"
-        :description="t('blog-desc')"
-        href="https://madeinheaven.space/blog"
-      />
-      <ContactCard
-        icon="pi-book"
-        :name="t('library')"
-        :description="t('library-desc')"
-        href="https://library.madeinheaven.space/"
-      />
+    <div class="flex justify-between items-center">
+      <h1><b>Made in heaven</b></h1>
+      <LanguageSwitch v-if="isDesktop" />
+      <LanguageSwitchMobile v-else />
     </div>
-  </section>
+    <hr class="style-seven" />
+    <section>
+      <p>{{ t("about") }}</p>
+      <p>{{ t("ul") }}</p>
+      <ul>
+        <li>{{ t("li1") }}</li>
+        <li>{{ t("li2") }}</li>
+        <li>{{ t("li3") }}</li>
+      </ul>
+    </section>
+
+    <h2>{{ t("projects") }}</h2>
+    <hr />
+    <section>
+      <Project
+        name="Black Turtle"
+        :desc="t('black-turtle')"
+        repo="black-turtle-go"
+      />
+      <Project name="Masterbeat" :desc="t('masterbeat')" repo="masterbeat" />
+      <Project name="JazzCoding" :desc="t('jazzcoding')" repo="heaven-web" />
+    </section>
+
+    <h2>{{ t("misc") }}</h2>
+    <hr />
+    <section>
+      <div
+        class="grid gap-5"
+        :class="isDesktop ? 'grid-cols-3' : 'grid-rows-3'"
+      >
+        <Card
+          icon="pi-telegram"
+          :name="t('channel')"
+          :description="t('channel-desc')"
+          href="https://t.me/jazz_coding"
+          border
+        />
+        <Card
+          icon="pi-pen-to-square"
+          :name="t('blog')"
+          :description="t('blog-desc')"
+          href="https://madeinheaven.space/blog"
+          border
+        />
+        <Card
+          icon="pi-book"
+          :name="t('library')"
+          :description="t('library-desc')"
+          href="https://library.madeinheaven.space/"
+          border
+        />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h2 class="text-center">{{ t("contacts") }}</h2>
+    <section>
+      <div
+        class="grid gap-5 mx-auto"
+        :class="isDesktop ? 'grid-cols-3 w-[50%]' : 'grid-rows-3'"
+      >
+        <Card
+          icon="pi-telegram"
+          :name="t('telegram')"
+          :description="t('telegram-desc')"
+          href="https://t.me/madeinheaven91"
+        />
+        <Card
+          icon="pi-github"
+          :name="t('github')"
+          :description="t('github-desc')"
+          href="https://github.com/madeinheaven91"
+        />
+        <Card
+          icon="pi-at"
+          :name="t('email')"
+          :description="t('email-desc')"
+          href="mailto:biznizjunk@gmail.com"
+        />
+      </div>
+    </section>
+  </footer>
 </template>
 
 <style scoped>
@@ -107,5 +119,9 @@ const { t } = useI18n();
 
 section {
   padding-inline: 1rem;
+}
+
+footer {
+  background-color: #030303;
 }
 </style>

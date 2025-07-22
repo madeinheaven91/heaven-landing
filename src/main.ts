@@ -1,7 +1,8 @@
 import { createApp } from "vue";
+import "@/tailwind.css";
 import "@/style.css";
 import App from "@/App.vue";
-import ContactCard from "@/components/contact-card";
+import Card from "@/components/card";
 import Project from "@/components/project/Project.vue";
 import LanguageSwitch from "@/components/language-switch";
 import i18n from "@/i18n";
@@ -9,7 +10,7 @@ import i18n from "@/i18n";
 
 const app = createApp(App);
 app
-  .component("ContactCard", ContactCard)
+  .component("Card", Card)
   .component("Project", Project)
   .component("LanguageSwitch", LanguageSwitch);
 

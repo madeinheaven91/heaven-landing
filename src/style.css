@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@reference "tailwindcss";
 @import "primeicons/primeicons.css";
 
 :root {
@@ -12,8 +12,8 @@
   body {
     @apply -z-100 overflow-x-hidden relative;
     width: 100%;
-    font-family: "Yeseva One", serif;
-    font-weight: 400;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
     font-style: normal;
     background-color: var(--bg);
     color: var(--fg-dark);
@@ -38,7 +38,7 @@
   }
 
   li::before {
-    font-family: 'primeicons';
+    font-family: "primeicons";
     content: "\e932";
     padding-inline: 0.5em;
   }
@@ -51,14 +51,20 @@
   }
 
   @media only screen and (min-width: 1024px) {
-    body {
+    main {
       @apply text-2xl;
       padding-block: 2rem;
       padding-inline: 6rem;
     }
 
+    footer {
+      @apply text-2xl;
+      padding-block: 1rem;
+      padding-inline: 6rem;
+    }
+
     p {
-      @apply mb-5;
+      @apply mt-5;
     }
 
     h1 {
@@ -66,26 +72,32 @@
     }
 
     h2 {
-      @apply text-5xl my-10;
+      @apply text-5xl mt-10;
     }
 
     h3 {
-      @apply text-4xl my-5;
+      @apply text-4xl mt-5;
     }
     h4 {
-      @apply text-3xl my-5;
+      @apply text-3xl mt-5;
     }
   }
 
   @media only screen and (max-width: 1024px) and (min-width: 640px) {
-    body {
+    main {
       @apply text-2xl;
       padding-block: 2rem;
       padding-inline: 6rem;
     }
 
+    footer {
+      @apply text-2xl;
+      padding-block: 1rem;
+      padding-inline: 6rem;
+    }
+
     p {
-      @apply mb-5;
+      @apply mt-5;
     }
 
     h1 {
@@ -93,26 +105,32 @@
     }
 
     h2 {
-      @apply text-5xl my-10;
+      @apply text-5xl mt-10;
     }
 
     h3 {
-      @apply text-4xl my-5;
+      @apply text-4xl mt-5;
     }
     h4 {
-      @apply text-3xl my-5;
+      @apply text-3xl mt-5;
     }
   }
 
   @media only screen and (max-width: 640px) {
-    body {
+    main {
       @apply text-xl;
       padding-block: 2rem;
       padding-inline: 2rem;
     }
 
+    footer {
+      @apply text-xl;
+      padding-block: 1rem;
+      padding-inline: 6rem;
+    }
+
     p {
-      @apply mb-2;
+      @apply mt-2;
     }
 
     h1 {
@@ -120,14 +138,14 @@
     }
 
     h2 {
-      @apply text-3xl my-5;
+      @apply text-3xl mt-5;
     }
 
     h3 {
-      @apply text-2xl my-2;
+      @apply text-2xl mt-2;
     }
     h4 {
-      @apply text-xl my-2;
+      @apply text-xl mt-2;
     }
   }
 }
