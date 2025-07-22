@@ -21,7 +21,7 @@ const { t } = useI18n();
     </div>
 
     <div class="flex justify-between items-center">
-      <h1><b>Made in heaven</b></h1>
+      <h1><b>Made In Heaven</b></h1>
       <LanguageSwitch v-if="isDesktop" />
       <LanguageSwitchMobile v-else />
     </div>
